@@ -5,11 +5,7 @@ const signupSchema = new Schema({
     fullName: String,
     email: String,
     mobile: Number,
-    password: String,
-    date: {
-        type: Date,
-        default: Date.now
-    }
+    password: String
 });
 
 module.exports = mongoose.model('signup', signupSchema);

@@ -25,7 +25,6 @@ app.post('/login', formController.login)
 
 
 app.listen(port, () => {
-    console.clear();
     console.log(`Backend is Running on ${port}`)
 })
 
