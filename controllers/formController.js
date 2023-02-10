@@ -110,7 +110,7 @@ module.exports.login = async (req, res) => {
 
         const isEmailExists = await userModel.findOne({ email: email })
 
-        console.log(isEmailExists, "isEmailExists")
+        // console.log(isEmailExists, "isEmailExists")
 
         if (isEmailExists) {
             console.log(isEmailExists.password, "Email Exists")
