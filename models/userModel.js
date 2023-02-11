@@ -7,8 +7,8 @@ const userSchema = new Schema({
     mobile: Number,
     password: String,
     date: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: Date
     }
 });
 

@@ -89,6 +89,8 @@ exports.verifyOtp = async (req, res) => {
         });
         await newuser.save();
         res.json({ message: 'Verification Done. userModel details moved to userschema' });
+        await formModel.findOneAndRemove({email: email })
+
         return;
     }
 
@@ -101,6 +103,8 @@ exports.verifyOtp = async (req, res) => {
 module.exports.login = async (req, res) => {
     const email = req.body.email
     const password = req.body.password
+
+    console.log(req.body)
 
     if (!email) {
         return res.send({ code: 400, message: 'email Required' })

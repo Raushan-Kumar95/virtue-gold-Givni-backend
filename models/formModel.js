@@ -9,8 +9,8 @@ const signupSchema = new Schema({
     otp: Number,
     isEmailVerified: { type: Boolean, default: false },
     date: {
-        type: Date,
-        default: Date.now
+        type: String,
+        default: Date
     }
 });
 
