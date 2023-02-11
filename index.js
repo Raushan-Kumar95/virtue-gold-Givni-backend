@@ -19,10 +19,7 @@ app.get('/hello', (req, res) => {
 })
 
 app.post('/signup', formController.signup)
-
-
 app.post('/login', formController.login)
-
 
 app.listen(port, () => {
     console.log(`Backend is Running on ${port}`)
